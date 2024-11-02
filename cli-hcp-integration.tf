@@ -1,11 +1,11 @@
 
-terraform { 
-  cloud { 
-    
-    organization = "my-aws-terraform-org" 
+terraform {
+  cloud {
 
-    workspaces { 
-      name = "cli-driven-dev-workflow" 
-    } 
-  } 
+    organization = "my-aws-terraform-org"
+
+    workspaces {
+      name = "cli-driven-dev-workflow"
+    }
+  }
 }

@@ -1,0 +1,5 @@
+HTTPS_Port          = "443"
+Dev_VPC_cidr_blocks = "172.31.0.0/16"
+Splunk_cidr_blocks  = "0.0.0.0/0"
+Dev_API_Port        = "8080"
+Prod_API_Port       = "8443"
