@@ -7,7 +7,7 @@ resource "aws_security_group" "dev-vpc-sg-1" {
 ingress {
   from_port         = 22
   to_port           = 22
-  ip_protocol       = "tcp"
+  protocol       = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
   description       = "Allow port 22"
 }
@@ -15,7 +15,7 @@ ingress {
 ingress {
   from_port         = 80
   to_port           = 80
-  ip_protocol       = "tcp"
+  protocol       = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
   description       = "Allow port 80"
 }
@@ -23,7 +23,7 @@ ingress {
 egress {
   from_port         = 0
   to_port           = 0
-  ip_protocol       = "-1"
+  protocol       = "-1"
   cidr_blocks      = ["0.0.0.0/0"]
   description       = "Allow all ip's & ports outbound"
 }
