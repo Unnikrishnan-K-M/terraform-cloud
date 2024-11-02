@@ -22,3 +22,17 @@ resource "aws_instance" "Apache-WebServer-1" {
     Name = "Apache-WebServer"
   }
 }
+
+
+/*
+# Access Application
+http://<AWS-ELASTIC-IP>
+
+$ pwd
+/c/Users/unniv/github_repos/terraform-cloud
+$ ls -l terraform-key.pem
+-r--r--r-- 1 unniv 197609 1678 Nov  1 23:46 terraform-key.pem
+$ chmod 400 "terraform-key.pem"
+$ ssh -i "terraform-key.pem" ec2-user@54.66.170.83
+$ sudo su -
+*/
