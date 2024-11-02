@@ -46,10 +46,6 @@ resource "aws_route" "dev-vpc-public-route-1" {
   route_table_id            = aws_route_table.dev-vpc-public-route_table-1.id
   destination_cidr_block    = "0.0.0.0/0"
   gateway_id = aws_internet_gateway.dev-vpc-igw-1.id
-
-    tags = {
-    Name = "dev-vpc-public-route"
-  }
 }
 
 
@@ -57,11 +53,6 @@ resource "aws_route" "dev-vpc-public-route-1" {
 resource "aws_route_table_association" "dev-vpc-public-route-table-associate-1" {
   subnet_id      = aws_subnet.dev-vpc-public-subnet-1.id
   route_table_id = aws_route_table.dev-vpc-public-route_table-1.id
-
-  tags = {
-    Name = "dev-vpc-public-route-table-associate"
-  }
-
 }
 
 
