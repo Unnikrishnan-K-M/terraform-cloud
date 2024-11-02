@@ -2,9 +2,9 @@
 resource "aws_instance" "Apache-WebServer-1" {
   ami           = "ami-086918d8178bfe266" # RedHat Linux in Asia Pacific (Sydney) ap-southeast-2
   instance_type = "t2.micro"
-  subnet_id = aws_subnet.dev-vpc-public-subnet-1.id
-  key_name = "terraform-key" #created manually before building EC2
-	user_data = file("apache-install.sh")
+  subnet_id     = aws_subnet.dev-vpc-public-subnet-1.id
+  key_name      = "terraform-key" #created manually before building EC2
+  user_data     = file("apache-install.sh")
   /*
   user_data = <<-EOF
     #!/bin/bash
@@ -16,9 +16,9 @@ resource "aws_instance" "Apache-WebServer-1" {
     EOF  
    */
 
-  vpc_security_group_ids = [ aws_security_group.dev-vpc-sg-1.id ]
+  vpc_security_group_ids = [aws_security_group.dev-vpc-sg-1.id]
 
- tags = {
+  tags = {
     Name = "Apache-WebServer"
   }
 }
