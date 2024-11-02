@@ -1,4 +1,4 @@
-# Resource Block
+# Resource-8: Create EC2 Instance
 resource "aws_instance" "Apache-WebServer-1" {
   ami           = "ami-086918d8178bfe266" # RedHat Linux in Asia Pacific (Sydney) ap-southeast-2
   instance_type = "t2.micro"
