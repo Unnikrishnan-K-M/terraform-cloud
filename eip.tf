@@ -4,7 +4,7 @@ resource "aws_eip" "my-eip1" {
   domain     = "vpc"
   depends_on = [aws_internet_gateway.dev-vpc-igw-1]
 
-    tags = {
+  tags = {
     Name = "my-eip"
   }
 
